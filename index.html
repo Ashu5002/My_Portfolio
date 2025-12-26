@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Navtake | Digital Resume Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ASHISH.</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn-nav-talk" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Hire Me</button>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Aspiring Data Scientist</span>
+            <h1>I Build Digital <span class="gradient-text">Masterpieces</span> That Scale.</h1>
+            <p>MCA Student at Presidency University | Python & Data Science Expert | AI Specialist. Creating data-driven solutions with precision and passion.</p>
+            <div class="hero-btns">
+                <button class="btn-primary" onclick="toggleResume()" style="display: flex; align-items: center; gap: 10px;">
+                    View Digital Resume <i class="fas fa-file-invoice"></i>
+                </button>
+                <button class="btn-secondary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">View Projects</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-wrapper">
+                <img src="Gemini_Generated_Image_d8eic7d8eic7d8ei.png" alt="Ashish Navtake">
+                <div class="rotating-ring"></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="resumePage" class="resume-overlay">
+        <div class="resume-content glass-card">
+            <button class="close-resume" onclick="toggleResume()">&times;</button>
+            
+            <header class="resume-header">
+                <h2>Ashish Navtake</h2>
+                <p>Aspiring Data Scientist | MCA Candidate</p>
+                <div class="resume-contact-info" style="display: flex; justify-content: center; gap: 20px; margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">
+                    <span><i class="fas fa-phone"></i> +91 96654330**</span>
+                    <span><i class="fas fa-envelope"></i> ashish**@gmail.com</span>
+                </div>
+            </header>
+
+            <div class="resume-body" style="text-align: left;">
+                <div class="resume-section" style="margin-bottom: 25px;">
+                    <h3 style="color: var(--accent); border-bottom: 1px solid var(--border); display: inline-block; margin-bottom: 15px;"><i class="fas fa-user-tie"></i> Summary</h3>
+                    <p style="opacity: 0.9; line-height: 1.6;">Aspiring Data Scientist with strong expertise in Python, data analysis, machine learning, and Generative AI. Proficient in SQL, MongoDB, and EDA. Passionate about transforming raw data into actionable insights.</p>
+                </div>
+
+                <div class="resume-section" style="margin-bottom: 25px;">
+                    <h3 style="color: var(--accent); border-bottom: 1px solid var(--border); display: inline-block; margin-bottom: 15px;"><i class="fas fa-tools"></i> Technical Skills</h3>
+                    <div class="skills-category" style="line-height: 1.8;">
+                        <p><strong>Programming:</strong> Python, SQL, Java (Basic)</p>
+                        <p><strong>Data Analysis:</strong> Pandas, NumPy, EDA</p>
+                        <p><strong>Machine Learning:</strong> Regression, Classification, Clustering</p>
+                        <p><strong>AI:</strong> Generative AI, NLP, Prompt Engineering</p>
+                        <p><strong>Visualization:</strong> Tableau, Power BI, Excel</p>
+                    </div>
+                </div>
+
+                <div class="resume-section" style="margin-bottom: 25px;">
+                    <h3 style="color: var(--accent); border-bottom: 1px solid var(--border); display: inline-block; margin-bottom: 15px;"><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <p><strong>Presidency University</strong> - MCA (Pursuing)</p>
+                    <p><strong>Savitribai Phule Pune University</strong> - BCA (2024)</p>
+                </div>
+
+                <div class="resume-section">
+                    <h3 style="color: var(--accent); border-bottom: 1px solid var(--border); display: inline-block; margin-bottom: 15px;"><i class="fas fa-medal"></i> Certifications</h3>
+                    <ul style="list-style: none; line-height: 1.8; opacity: 0.9;">
+                        <li>▹ Oracle Certified Generative AI Professional (2025)</li>
+                        <li>▹ AWS Certified Cloud Practitioner (2025)</li>
+                        <li>▹ TCS iON Career Edge (2024)</li>
+                    </ul>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="Ashish_Navtake_Resume.pdf" download class="btn-primary" style="text-decoration: none;">Download PDF Version</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="about reveal">
+        <h2 class="section-title">About Me</h2>
+        <div class="glass-card">
+            <p>I am an <strong>MCA student at Presidency University</strong> with a specialized focus on Data Science and AI-powered applications. I bridge the gap between complex backend logic and intelligent solutions for real-world problems.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills reveal">
+        <h2 class="section-title">Technical Arsenal</h2>
+        <div class="skills-grid">
+            <div class="skill-card"><i class="fab fa-python"></i><h3>Python & SQL</h3></div>
+            <div class="skill-card"><i class="fas fa-brain"></i><h3>Generative AI</h3></div>
+            <div class="skill-card"><i class="fas fa-microchip"></i><h3>Machine Learning</h3></div>
+            <div class="skill-card"><i class="fas fa-chart-line"></i><h3>EDA & Pandas</h3></div>
+            <div class="skill-card"><i class="fas fa-database"></i><h3>NoSQL (MongoDB)</h3></div>
+            <div class="skill-card"><i class="fas fa-laptop-code"></i><h3>Full Stack (Basic)</h3></div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects reveal">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card glass-card">
+                <div class="project-img">
+                    <img src="chatbot.jpeg" alt="AI Chatbot" style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
+                </div>
+                <div class="project-info">
+                    <h3>AI Chatbot Support</h3>
+                    <p>Developed an NLP-powered chatbot for understanding user queries and delivering automated responses.</p>
+                    <div class="project-tags"><span>Python</span><span>NLP</span></div>
+                </div>
+            </div>
+
+            <div class="project-card glass-card">
+                <div class="project-img">
+                    <img src="campusride.webp" alt="Campus Ride" style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
+                </div>
+                <div class="project-info">
+                    <h3>Campus Ride Sharing</h3>
+                    <p>Secure student ride-sharing application with verified logins and backend matching logic.</p>
+                    <div class="project-tags"><span>Node.js</span><span>Firebase</span></div>
+                </div>
+            </div>
+
+            <div class="project-card glass-card">
+                <div class="project-img">
+                    <img src="chat.jpeg" alt="Bookstore" style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
+                </div>
+                <div class="project-info">
+                    <h3>E-Commerce Bookstore</h3>
+                    <p>Full bookstore app with product filtering, cart management, and inventory logic.</p>
+                    <div class="project-tags"><span>React</span><span>SQL</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact reveal">
+        <h2 class="section-title">Let's Talk</h2>
+        <div class="contact-grid">
+            <div class="contact-info glass-card">
+                <h3>Contact Information</h3>
+                <div class="info-item"><i class="fas fa-envelope"></i><p>ashishnavtake0@gmail.com</p></div>
+                <div class="info-item"><i class="fab fa-github"></i><p>github.com/ashishnavtake</p></div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/ashish-navtake03" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/ashishnavtake" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-form-container glass-card">
+                <form action="https://formspree.io/f/xgoevppa" method="POST" class="contact-form">
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <textarea name="message" placeholder="Tell me about your project..." rows="6" required></textarea>
+                    <button type="submit" class="btn-submit">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/919665433061" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Chat with me</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
