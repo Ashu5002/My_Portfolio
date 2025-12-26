@@ -175,9 +175,13 @@ body { background: var(--bg); color: #fff; font-family: 'Poppins', sans-serif; o
 
 @keyframes slideInUp { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
-/* Floating WhatsApp */
-.whatsapp-btn {
-    position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white;
-    padding: 12px 25px; border-radius: 50px; display: flex; align-items: center;
-    gap: 10px; font-weight: bold; z-index: 9999; text-decoration: none;
+/* Mobile Fix: Icon only on very small screens */
+@media (max-width: 480px) {
+    .linkedin-btn span {
+        display: none;
+    }
+    .linkedin-btn {
+        padding: 15px;
+        border-radius: 50%;
+    }
 }
